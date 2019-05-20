@@ -58,10 +58,13 @@ header li{
 
 header #branding{
   float:left;
+  text-transform: uppercase;
 }
 
 header #branding h1{
   margin:0;
+  font: 15px/1.5 Open-Sans,Montserrat,Arial,Helvetica,sans-serif;
+  font-size: 2em;
 }
 
 header nav{

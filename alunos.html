@@ -7,9 +7,10 @@
 	  <meta name="keywords" content="Free English, Freenglish, learn english for free, aprender inglês, aprender ingles, de graça">
   	<meta name="author" content="Kalebi Serafim">
     <title>Welcome to Freenglish</title>
-    <link rel="stylesheet" href="./css/alunos.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-  
+    <link rel="stylesheet" href="./css/alunos.css">
+
     
   </head>
   <body class= "bg-alunos">
@@ -37,6 +38,7 @@
                     <th>Idade</th>
                     <th>Nível</th>
                     <th>Turma</th>
+                    <th>Matrícula</th>
                 </tr>
             </thead>
             <tbody id="tabela-alunos">
@@ -44,19 +46,22 @@
                     <td class="info-nome">maria stevan</td>
                     <td class="info-idade">12</td>
                     <td class="info-nivel">básico</td>
-                    <td class="info-turma">tarde</td>
+                    <td class="info-turma">tarde</td>                    
+                    <td class="info-matricula">R$100.00</td>
                 </tr>
                 <tr class="alunos" >
                     <td class="info-nome">Joaquim de souza</td>
                     <td class="info-idade">42</td>
                     <td class="info-nivel">avançado</td>
-                    <td class="info-turma">noite</td>
+                    <td class="info-turma">noite</td>                    
+                    <td class="info-matricula">R$300.00</td>
                 </tr> <tr class="alunos" >
                     <td class="info-nome">Paulo Joaquim da Silva</td>
                     <td class="info-idade">25</td>
                     <td class="info-nivel">intermediário</td>
                     <td class="info-turma">manhã</td>
-                </tr>
+                    <td class="info-matricula">R$200.00</td>
+                </tr>                
             </tbody>
         </table>
 
@@ -72,9 +77,10 @@
           <div class="grupo">
               <label for="nivel">Nível:</label>
               <select name="nivel" class="campo campo-medio">
-                <option value="basico">Básico</option>
-                <option value="intermediario">Intermediário</option>
-                <option value="avancado">Avançado</option>
+                <option value="" disabled selected>Nível</option>               
+                <option value="básico">Básico</option>
+                <option value="intermediário">Intermediário</option>
+                <option value="avançado">Avançado</option>
               </select>
            </div>
           <div class="grupo">
@@ -84,6 +90,7 @@
           <div class="grupo">
                 <label for="turma">Período:</label>
                 <select name="turma" class="campo campo-medio">
+                  <option value="" disabled selected>Período</option>
                   <option value="manha">Manhã</option>
                   <option value="tarde">Tarde</option>
                   <option value="noite">Noite</option>
@@ -98,4 +105,7 @@
     </footer>
   </body>
   <script src="js/alunos.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/matricula.js"></script>
+
 </html>
