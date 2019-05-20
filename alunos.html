@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A free way to learn english">
+	  <meta name="keywords" content="Free English, Freenglish, learn english for free, aprender inglês, aprender ingles, de graça">
+  	<meta name="author" content="Kalebi Serafim">
+    <title>Welcome to Freenglish</title>
+    <link rel="stylesheet" href="./css/alunos.css">
+    <link rel="stylesheet" href="./css/style.css">
+  
+    
+  </head>
+  <body class= "bg-alunos">
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Freenglish</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container">
+        <h2>Lista de Alunos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Nível</th>
+                    <th>Turma</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-alunos">
+                <tr class="alunos" >
+                    <td class="info-nome">maria stevan</td>
+                    <td class="info-idade">12</td>
+                    <td class="info-nivel">básico</td>
+                    <td class="info-turma">tarde</td>
+                </tr>
+                <tr class="alunos" >
+                    <td class="info-nome">Joaquim de souza</td>
+                    <td class="info-idade">42</td>
+                    <td class="info-nivel">avançado</td>
+                    <td class="info-turma">noite</td>
+                </tr> <tr class="alunos" >
+                    <td class="info-nome">Paulo Joaquim da Silva</td>
+                    <td class="info-idade">25</td>
+                    <td class="info-nivel">intermediário</td>
+                    <td class="info-turma">manhã</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <section class="container">
+      <h2 id="titulo-form">Adicionar novo aluno</h2>
+      <form id="form-adiciona">
+          <div class="grupo grupo1">
+              <label for="nome">Nome:</label>
+              <input id="nome" name="nome" type="text" placeholder="digite o nome do aluno" class="campo">
+          </div>
+          <div class="grupo">
+              <label for="nivel">Nível:</label>
+              <select name="nivel" class="campo campo-medio">
+                <option value="basico">Básico</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+              </select>
+           </div>
+          <div class="grupo">
+              <label for="idade">Idade::</label>
+              <input id="idade" name="idade" type="text" placeholder="digite a idade do aluno" class="campo campo-medio campo-medio2">
+          </div>
+          <div class="grupo">
+                <label for="turma">Período:</label>
+                <select name="turma" class="campo campo-medio">
+                  <option value="manha">Manhã</option>
+                  <option value="tarde">Tarde</option>
+                  <option value="noite">Noite</option>
+                </select>
+           </div>
+  
+          <button id="adicionar-aluno" class="botao bto-principal" class="grupo">Adicionar</button>
+      </form>
+  </section>
+    <footer class="footer">
+      <p>Freenglish &copy; 2019</p>
+    </footer>
+  </body>
+  <script src="js/alunos.js"></script>
+</html>
