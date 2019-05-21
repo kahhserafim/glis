@@ -7,14 +7,19 @@ botaoAdicionar.addEventListener("click", function(event) {
     
     var aluno = coletaDadosAluno(form);
 
-    var alunoTr = montaTr(aluno);
+    var alunoTr = montaTr(aluno);   
+    
+    var alunoValido = validaAluno(aluno)
     
     var tabela = document.querySelector("#tabela-alunos");
-
-    tabela.appendChild(alunoTr);
-
+    
+    if (alunoValido == true){
+        tabela.appendChild(alunoTr);
+    }else{
+        alert("Por favor preencha os campos corretamente")
+    }
     form.reset();
-
+    
 });
 
 function coletaDadosAluno(form){
@@ -24,7 +29,7 @@ function coletaDadosAluno(form){
         nivel: form.nivel.value,
         turma: form.turma.value,
         matricula: calculaMatricula(form.nivel.value)
-    }     
+    } 
     return aluno;
 }
 
@@ -32,7 +37,7 @@ function montaTr(aluno){
     var alunoTr = document.createElement("tr");
     alunoTr.classList.add("alunos")
 
-    alunoTr.appendChild(montaTd(aluno.nome, "info-peso"));
+    alunoTr.appendChild(montaTd(aluno.nome, "info-nome"));
     alunoTr.appendChild(montaTd(aluno.idade, "info-idade"));
     alunoTr.appendChild(montaTd(aluno.nivel, "info-nivel"));
     alunoTr.appendChild(montaTd(aluno.turma, "info-turma"));

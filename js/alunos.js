@@ -28,3 +28,12 @@ function calculaMatricula(nivel){
 
     return valor;
 }
+
+
+function validaAluno(aluno){
+    if((aluno.nome == "") || (aluno.idade.value <= 0 || aluno.idade.value >= 150) || (aluno.nivel == "") || (aluno.turma =="")){
+        return false;
+    }else{
+        return true;
+    }
+}
